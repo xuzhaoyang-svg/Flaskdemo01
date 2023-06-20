@@ -10,6 +10,16 @@ app = Flask(__name__)
 def hello_world():  # put application's code here
     return 'Hello World!'
 
+# 1. debug模式（热部署）
+# 1.1 开启debug模式后，只要修改代码后保存，就会自动重新加载，不需要手动重启项目
+# 1.2 可以直接在浏览器上看到bug信息
+
+# 2. 修改host
+# 让局域网中其他设备访问到项目
+
+# 3. 修改端口号
+# 如果5000端口被占用可以修改用其他端口
+
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
